@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card">
+        <h1 class="card__title">Password Strength Checker</h1>
+        <p class="card__description">
+          Type a password below to see how strong it is and how you can improve it.
+        </p>
+
+        <div class="password-input-group">
+          <label for="password" class="password-input-group__label">Password</label>
+          <div class="password-input-group__field">
+            <input
+              id="password"
+              type="password"
+              class="password-input-group__input"
+              placeholder="Enter your password"
+              autocomplete="new-password"
+            />
+            <button id="togglePassword" class="password-input-group__toggle" type="button">
+              Show
+            </button>
+          </div>
+        </div>
+
+        <div class="strength">
+          <div class="strength__bar-wrapper">
+            <div id="strengthBar" class="strength__bar"></div>
+          </div>
+          <p id="strengthText" class="strength__text">Start typing to check strength</p>
+        </div>
+
+        <div class="checklist">
+          <h2 class="checklist__title">Password Requirements</h2>
+          <ul class="checklist__list">
+            <li class="checklist__item" id="rule-length">
+              <span class="checklist__icon">✗</span>
+              <span class="checklist__text">At least 8 characters</span>
+            </li>
+            <li class="checklist__item" id="rule-lowercase">
+              <span class="checklist__icon">✗</span>
+              <span class="checklist__text">Contains lowercase letter (a-z)</span>
+            </li>
+            <li class="checklist__item" id="rule-uppercase">
+              <span class="checklist__icon">✗</span>
+              <span class="checklist__text">Contains uppercase letter (A-Z)</span>
+            </li>
+            <li class="checklist__item" id="rule-number">
+              <span class="checklist__icon">✗</span>
+              <span class="checklist__text">Contains number (0-9)</span>
+            </li>
+            <li class="checklist__item" id="rule-special">
+              <span class="checklist__icon">✗</span>
+              <span class="checklist__text">
+                Contains special character (!@#$%^&amp;* etc.)
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <p id="tipText" class="tip">
+          Tip: Use a mix of letters, numbers, and symbols to create a stronger password.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+

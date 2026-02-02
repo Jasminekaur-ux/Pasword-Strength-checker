@@ -1,0 +1,187 @@
+/* 
+  Basic page setup
+  - Dark background
+  - Center the card using flexbox
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #1f2933, #0b1017);
+  color: #f9fafb;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Card container */
+.card {
+  background-color: #111827;
+  border-radius: 1rem;
+  padding: 1.75rem 1.5rem 1.75rem;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.card__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.card__description {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Password input area */
+.password-input-group {
+  margin-bottom: 1.25rem;
+}
+
+.password-input-group__label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+  color: #e5e7eb;
+}
+
+.password-input-group__field {
+  display: flex;
+  align-items: stretch;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid #374151;
+  background-color: #020617;
+}
+
+.password-input-group__input {
+  flex: 1;
+  padding: 0.65rem 0.75rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #f9fafb;
+  font-size: 0.95rem;
+}
+
+.password-input-group__input::placeholder {
+  color: #6b7280;
+}
+
+/* Show/Hide button */
+.password-input-group__toggle {
+  background-color: #111827;
+  color: #e5e7eb;
+  border: none;
+  padding: 0 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-left: 1px solid #374151;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.password-input-group__toggle:hover {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+/* Strength bar section */
+.strength {
+  margin-bottom: 1.25rem;
+}
+
+.strength__bar-wrapper {
+  width: 100%;
+  height: 0.55rem;
+  background-color: #020617;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #111827;
+}
+
+.strength__bar {
+  height: 100%;
+  width: 0%;
+  border-radius: inherit;
+  transition: width 0.2s ease, background-color 0.2s ease;
+  background-color: #ef4444; /* default red */
+}
+
+.strength__text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+/* Checklist styles */
+.checklist {
+  margin-bottom: 1rem;
+}
+
+.checklist__title {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.checklist__list {
+  list-style: none;
+}
+
+.checklist__item {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 0.15rem 0;
+  color: #9ca3af;
+}
+
+.checklist__icon {
+  display: inline-flex;
+  width: 1.4rem;
+  justify-content: center;
+  margin-right: 0.25rem;
+  font-weight: 600;
+}
+
+.checklist__item--valid {
+  color: #bbf7d0;
+}
+
+.checklist__item--valid .checklist__icon {
+  color: #22c55e;
+}
+
+.checklist__item--invalid .checklist__icon {
+  color: #f97316;
+}
+
+/* Tip text */
+.tip {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 0.2rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 480px) {
+  .card {
+    padding: 2rem 2rem 2rem;
+  }
+}
+
